@@ -5,3 +5,6 @@
 Create a function application that can be used to create, save and delete custom notes.
 
 ## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
