@@ -8,3 +8,16 @@ Create a function application that can be used to create, save and delete custom
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
+
+
+
+
+
+
+
+
+
+## License
+
+This repository is licensed under the MIT License.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
