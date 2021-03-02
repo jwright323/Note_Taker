@@ -29,6 +29,7 @@ npm i
 ## Usage
 
 This application is for users needing to keep track of a lot of information, it is easy to forget or be unable to recall something important. Being able to take persistent notes allows users to have written information available when needed.
+
 This application was deployed in Heroku.
 
 ### Note Taker Link in Heroku
