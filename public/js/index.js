@@ -93,7 +93,7 @@ const handleNewNoteView = function () {
 
 // If a note's title or text are empty, hide the save button
 // Or else show it
-const handleRenderSaveBtn = function () {
+const handleRenderSaveButton = function () {
   if (!$noteTitle.val().trim() || !$noteText.val().trim()) {
     $saveNoteButton.hide();
   } else {
@@ -115,10 +115,10 @@ const renderNoteList = (notes) => {
     $li.append($span);
 
     if (withDeleteButton) {
-      const $delBtn = $(
+      const $delButton = $(
         "<i class='fas fa-trash-alt float-right text-danger delete-note'>"
       );
-      $li.append($delBtn);
+      $li.append($delButton);
     }
     return $li;
   };
@@ -144,8 +144,8 @@ $saveNoteButton.on("click", handleNoteSave);
 $noteList.on("click", ".list-group-item", handleNoteView);
 $newNoteButton.on("click", handleNewNoteView);
 $noteList.on("click", ".delete-note", handleNoteDelete);
-$noteTitle.on("keyup", handleRenderSaveBtn);
-$noteText.on("keyup", handleRenderSaveBtn);
+$noteTitle.on("keyup", handleRenderSaveButton);
+$noteText.on("keyup", handleRenderSaveButton);
 
 // Gets and renders the initial list of notes
 getAndRenderNotes();
