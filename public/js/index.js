@@ -1,7 +1,7 @@
 const $noteTitle = $(".note-title");
 const $noteText = $(".note-textarea");
-const $saveNoteButton = $(".save-note");
-const $newNoteButton = $(".new-note");
+const $saveNoteBtn = $(".save-note");
+const $newNoteBtn = $(".new-note");
 const $noteList = $(".list-container .list-group");
 
 // activeNote is used to keep track of the note in the textarea
@@ -34,7 +34,7 @@ const deleteNote = (id) => {
 
 // If there is an activeNote, display it, otherwise render empty inputs
 const renderActiveNote = () => {
-  $saveNoteButton.hide();
+  $saveNoteBtn.hide();
 
   if (activeNote.id) {
     $noteTitle.attr("readonly", true);
@@ -93,11 +93,11 @@ const handleNewNoteView = function () {
 
 // If a note's title or text are empty, hide the save button
 // Or else show it
-const handleRenderSaveButton = function () {
+const handleRenderSaveBtn = function () {
   if (!$noteTitle.val().trim() || !$noteText.val().trim()) {
-    $saveNoteButton.hide();
+    $saveNoteBtn.hide();
   } else {
-    $saveNoteButton.show();
+    $saveNoteBtn.show();
   }
 };
 
@@ -115,10 +115,10 @@ const renderNoteList = (notes) => {
     $li.append($span);
 
     if (withDeleteButton) {
-      const $delButton = $(
+      const $delBtn = $(
         "<i class='fas fa-trash-alt float-right text-danger delete-note'>"
       );
-      $li.append($delButton);
+      $li.append($delBtn);
     }
     return $li;
   };
@@ -140,12 +140,12 @@ const getAndRenderNotes = () => {
   return getNotes().then(renderNoteList);
 };
 
-$saveNoteButton.on("click", handleNoteSave);
+$saveNoteBtn.on("click", handleNoteSave);
 $noteList.on("click", ".list-group-item", handleNoteView);
-$newNoteButton.on("click", handleNewNoteView);
+$newNoteBtn.on("click", handleNewNoteView);
 $noteList.on("click", ".delete-note", handleNoteDelete);
-$noteTitle.on("keyup", handleRenderSaveButton);
-$noteText.on("keyup", handleRenderSaveButton);
+$noteTitle.on("keyup", handleRenderSaveBtn);
+$noteText.on("keyup", handleRenderSaveBtn);
 
 // Gets and renders the initial list of notes
 getAndRenderNotes();
