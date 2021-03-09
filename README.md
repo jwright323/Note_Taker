@@ -34,6 +34,8 @@ This application was deployed in Heroku.
 
 ### Note Taker Link in Heroku
 
+https://jamals-note-taker.herokuapp.com/notes
+
 ## License
 
 This repository is licensed under the MIT License.
